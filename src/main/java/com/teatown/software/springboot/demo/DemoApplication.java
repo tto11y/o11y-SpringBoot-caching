@@ -1,4 +1,4 @@
-package com.teatown.software.kubernetes.demo;
+package com.teatown.software.springboot.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

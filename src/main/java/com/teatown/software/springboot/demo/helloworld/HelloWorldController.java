@@ -1,4 +1,4 @@
-package com.teatown.software.kubernetes.demo.helloworld;
+package com.teatown.software.springboot.demo.helloworld;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.teatown.software.kubernetes.demo;
+package com.teatown.software.springboot.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -37,7 +37,6 @@ public class HelloWorldCacheService {
 
         log.info("Starting to sleep");
         try {
-//            Thread.sleep(5 * 1000); // 5 sec
             Thread.sleep(5);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

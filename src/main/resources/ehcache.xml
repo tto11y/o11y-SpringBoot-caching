@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config
+		xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+		xmlns='http://www.ehcache.org/v3'
+		xsi:schemaLocation="
+        http://www.ehcache.org/v3 https://www.ehcache.org/schema/ehcache-core-3.3.xsd">
+
+	<cache-template name="template">
+		<key-type>java.lang.Object</key-type>
+		<value-type>java.lang.Object</value-type>
+		<listeners>
+			<listener>
+				<class>com.teatown.software.springboot.demo.application.cache.CacheEventLogger</class>
+				<event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+				<event-ordering-mode>UNORDERED</event-ordering-mode>
+				<events-to-fire-on>CREATED</events-to-fire-on>
+				<events-to-fire-on>UPDATED</events-to-fire-on>
+				<events-to-fire-on>EXPIRED</events-to-fire-on>
+				<events-to-fire-on>REMOVED</events-to-fire-on>
+				<events-to-fire-on>EVICTED</events-to-fire-on>
+			</listener>
+		</listeners>
+	</cache-template>
+
+	<cache alias="hellowWorld" uses-template="template">
+		<expiry>
+            <!-- the small time-to-live is just for testing reasons. -->
+            <!-- In a productive application you would want to set it much higher depending on how long the data should be cached -->
+			<ttl>30</ttl> <!-- seconds -->
+		</expiry>
+		<heap>100</heap> <!-- entries -->
+	</cache>
+</config>
